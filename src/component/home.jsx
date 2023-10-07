@@ -6,6 +6,7 @@ import design from "../asset/design.png";
 import Header from "./navbar";
 import Footer from "./footer";
 import Sidebar from "./sidebar";
+import TypewriterEffect from "../asset/type_writer/type";
 
 import logo from "../logo.svg";
 
@@ -32,6 +33,7 @@ const Home = () => {
                     justify-start  text-left py-8"
           >
             <h1>Coding Maestro Sculpting Solutions for Tomorrow's Challenges</h1>
+            <TypewriterEffect text={'Hello World!'} />
           </div>
           <div className="overflow-clip w-[400px] px-5 py-5 hidden md:flex min justify-end animate">
 
