@@ -45,6 +45,11 @@ code {
   text-fill-color: transparent;
 }
 
+.bg-green-gradient{
+  background: linear-gradient(108.7deg, 
+  rgb(224, 235, 213) 8.1%,
+   rgb(37, 148, 141) 91.2%);
+}
 .bg-blue-gradient {
   background: linear-gradient(157.81deg,
       #def9fa -43.27%,
@@ -56,10 +61,14 @@ code {
 }
 
 .bg-black-gradient {
-  background: linear-gradient(144.39deg,
+  /* background: linear-gradient(144.39deg,
       #ffffff -278.56%,
       #6d6d6d -78.47%,
-      #11101d 91.61%);
+      #11101d 91.61%); */
+        background: linear-gradient(144.39deg,
+              rgba(255, 255, 255, 0.8) -278.56%,
+              rgba(109, 109, 109, 0.8) -78.47%,
+              rgba(17, 16, 29, 0.8) 91.61%);
 }
 
 .bg-black-gradient-2 {
@@ -145,7 +154,7 @@ code {
 }
 
 
-.dev {
+/* .dev {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -153,7 +162,7 @@ code {
   padding: 0;
   min-height: 100vh;
  
-}
+} */
 
 html,body {
   height: 100%;

@@ -19,29 +19,35 @@ import {
 import About from './component/about';
 import Sidebar from './component/sidebar';
 import Contact from './component/contact';
+import Contact2 from './component/contact2';
+import ContactMe from './component/contact';
+import Skill from './component/skills';
 
 function App() {
   return (
     <div className=''>
       <BrowserRouter>
-        <div className='dev bg-black-gradient'>
-          <div className=' bg-stone-800 '>
+        <div className='dev bg-green-gradient'>
+          {/* <div className=' '>
             <Header />
-          </div>
+          </div> */}
           <div className=''>
             <Routes>
               <Route index element={<Home />} />
               <Route path="/" element={<Home />} />
-              {/* <Route path="/my-app" element={<Home />} /> */}
               <Route path="/home" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/resume" element={<Resume />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/contact2" element={<Contact2 />} />
+              <Route path="/contact" element={<ContactMe />} />
+              <Route path="/skills" element={<Skill />} />
+
+
             </Routes>
           </div>
-          <div className='justify-end'>
+          {/* <div className='justify-end'>
             <Footer />
-          </div>
+          </div> */}
         </div>
       </BrowserRouter>
     </div>

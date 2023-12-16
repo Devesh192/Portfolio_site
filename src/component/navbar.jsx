@@ -21,12 +21,8 @@ import {
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   return (
-    <div className="flex 
-    // bg-slate-500
-     bg-teal-700 bg-opacity-70 
-    ">
+    <div className="flex bg-teal-900">
       <div className=' px-3 rounded-xl mx-3 my-3 flex text-right w-[90px] justify-center items-center  font-[50px] '>
-        {/* <img src={design} alt="design" className="w-[90px] h-[80px] " /> */}
         <Link className=" px-3 py-3 bg-teal-600 rounded-lg hover:scale-125 ease-out  duration-300" to="/home">devesh</Link>
       </div>
       <nav
@@ -36,13 +32,12 @@ const Header = () => {
         <div className="hidden sm:flex  space-x-5 ">
           <Link className=" px-3 py-3 bg-teal-600 bg-gradient-to-tl rounded-lg hover:scale-125 ease-out  duration-300" to="/about">about</Link>
           <Link className=" px-3 py-3 bg-teal-600 rounded-lg hover:scale-125 ease-out  duration-300" to="/home">home</Link>
-          <Link className=" px-3 py-3 bg-teal-600 rounded-lg hover:scale-125 ease-out  duration-300" to="/contact">contact</Link>
+          <Link className=" px-3 py-3 bg-teal-600 rounded-lg hover:scale-125 ease-out  duration-300" to="/skills">skills</Link>
+          <Link className=" px-3 py-3 bg-teal-600 rounded-lg hover:scale-125 ease-out  duration-300" to="/contact">contact me</Link>
           <Link className=" px-3 py-3 bg-teal-600 rounded-lg hover:scale-125 ease-out  duration-300" to="/resume">resume</Link>
+
         </div>
-        <div
-          className="sm:hidden flex flex-1 justify-end
-        items-center"
-        >
+        <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -58,10 +53,10 @@ const Header = () => {
               text-white 
               sidebar `}
           >
-            <ul className="list-none flex flex-col flex-1">
+            <ul className="list-none flex flex-col flex-1 p-3 px-7 space-y-3 hover:scale-125 ease-out ">
               <Link to="/about">about</Link>
               <Link to="/home">home</Link>
-              <Link to="/contact">contact</Link>
+              <Link to="/contact2">contact</Link>
               <Link to="/resume">resume</Link>
             </ul>
           </div>
