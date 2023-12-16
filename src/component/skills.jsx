@@ -24,12 +24,12 @@ function Skills() {
                             <div className="flex items-center justify-center align-top mt-3">
                                 Compitive Programming
                             </div>
-                            <div className="animat  bg-blue-200 w-80 h-40  opacity-30">
-                                maximum rating 3 star
+                            <div className="animat  bg-blue-200 w-80 h-40 rounded-lg opacity-30 p-3">
+                                • CodeChef : maximum rating of 1484
                                 <br />
-                                codeforces
+                                • Codeforces: maximum rating - 927
                                 <br />
-                                codechef
+                                • Hacker Rank: 6 star[problem solving]
                             </div>
                         </div>
                     ) : (
@@ -62,11 +62,11 @@ function Skills() {
                                     Web Development
                                 </div>
                                 <div className="animat rounded-lg bg-green-200 w-80 h-40 p-3">
-                                    maximum rating 3 star
+                                    • Mern Stack Developer
                                     <br />
-                                    codeforces
+                                    • React
                                     <br />
-                                    codechef
+                                    • Java Script
                                 </div>
                             </div>
                         </>
@@ -95,14 +95,14 @@ function Skills() {
                     {hoveredCard3 ? (
                         <div className="parent flex flex-col shadow-md  justify-between h-full ">
                             <div className="flex items-center justify-center align-top mt-3">
-                                Web Development
+                                Data Structure and Algorithm
                             </div>
                             <div className="animat rounded-lg bg-red-200 w-80 h-40 p-3">
-                                maximum rating 3 star
+                                • Leetcode : solved 250+ problems
                                 <br />
-                                codeforces
+                                • Hacker Rank: solved 200+ problems
                                 <br />
-                                codechef
+                                {/* codechef */}
                             </div>
                         </div>
                     ) : (

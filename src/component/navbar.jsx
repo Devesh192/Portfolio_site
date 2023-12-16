@@ -22,19 +22,22 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <div className="flex bg-teal-900">
-      <div className=' px-3 rounded-xl mx-3 my-3 flex text-right w-[90px] justify-center items-center  font-[50px] '>
-        <Link className=" px-3 py-3 bg-teal-600 rounded-lg hover:scale-125 ease-out  duration-300" to="/home">devesh</Link>
+      <div className=' px-3 rounded-xl mx-3 my-3 flex  w-[90px] justify-center items-center  font-[50px] '>
+        <Link className=" px-3 py-3 bg-teal-600 rounded-lg hover:scale-125 ease-out  duration-300" to="/home">
+          <i class="fa-solid fa-house fa-xl"></i>
+          Devesh
+        </Link>
       </div>
       <nav
         className=" w-full flex  justify-end space-x-7 
         items-center navbar h-20 text-lg px-4"
       >
         <div className="hidden sm:flex  space-x-5 ">
-          <Link className=" px-3 py-3 bg-teal-600 bg-gradient-to-tl rounded-lg hover:scale-125 ease-out  duration-300" to="/about">about</Link>
-          <Link className=" px-3 py-3 bg-teal-600 rounded-lg hover:scale-125 ease-out  duration-300" to="/home">home</Link>
-          <Link className=" px-3 py-3 bg-teal-600 rounded-lg hover:scale-125 ease-out  duration-300" to="/skills">skills</Link>
-          <Link className=" px-3 py-3 bg-teal-600 rounded-lg hover:scale-125 ease-out  duration-300" to="/contact">contact me</Link>
-          <Link className=" px-3 py-3 bg-teal-600 rounded-lg hover:scale-125 ease-out  duration-300" to="/resume">resume</Link>
+          <Link className=" px-3 py-3 bg-teal-600 bg-gradient-to-tl rounded-lg hover:scale-125 ease-out  duration-300" to="/about">About</Link>
+          {/* <Link className=" px-3 py-3 bg-teal-600 rounded-lg hover:scale-125 ease-out  duration-300" to="/home">home</Link> */}
+          <Link className=" px-3 py-3 bg-teal-600 rounded-lg hover:scale-125 ease-out  duration-300" to="/skills">Skills</Link>
+          <Link className=" px-3 py-3 bg-teal-600 rounded-lg hover:scale-125 ease-out  duration-300" to="/contact">Contact me</Link>
+          <Link className=" px-3 py-3 bg-teal-600 rounded-lg hover:scale-125 ease-out  duration-300" to="/resume">Resume</Link>
 
         </div>
         <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -56,7 +59,8 @@ const Header = () => {
             <ul className="list-none flex flex-col flex-1 p-3 px-7 space-y-3 hover:scale-125 ease-out ">
               <Link to="/about">about</Link>
               <Link to="/home">home</Link>
-              <Link to="/contact2">contact</Link>
+              <Link to="/contact">contact</Link>
+              <Link to="/skills">Skills</Link>
               <Link to="/resume">resume</Link>
             </ul>
           </div>
