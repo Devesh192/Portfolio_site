@@ -1,4 +1,4 @@
-// import React from "react";
+
 import a from "../asset/a.png";
 import b from "../asset/b.png";
 import styles from "../styles";
@@ -16,21 +16,34 @@ import Layout from "./Layout";
 const Home = () => {
   return (
     <Layout>
-      <div className="flex w-screen h-[580px] ">
-        <div className="my-12">
+      <div className="flex flex-col-reverse sm:flex-row">
+        <div className="sm:w-1/4">
           <Sidebar />
         </div>
 
-        <div className="flex justify-between w-full">
-          <div className="text-5xl font-bold  py-12 px-5 flex flex-col ">
-            <h1 className="mb-4">Coding Maestro Sculpting Solutions for Tomorrow's Challenges</h1>
-            <TypewriterEffect className = "text-left items-start" text={'Hello World!'} />
+        <div className="p-3 flex flex-col sm:flex-row justify-between max-w-full">
+          <div className=" sm:w-3/4 p-2">
+            <h1 className="text-5xl font-bold mb-4">
+              Coding Maestro Sculpting Solutions for Tomorrow's Challenges
+            </h1>
+
+            <div className="flex justify-start text-2xl overflow-hidden">
+              <TypewriterEffect text={"Hi! My name is Devesh"} />
+            </div>
           </div>
-          <div className="rounded-full shadow-xl w-[300px] h-[400px] hidden sm:flex justify-end items-center">
+          {/* <div className="rounded-full w-[300px] h-[400px] mx-auto sm:mx-0">
             <img
               src={b}
               alt="profile-pic"
-              className="border rounded-full max-w-full max-h-full"
+              className="border rounded-full shadow-xl max-w-full max-h-full"
+            />
+          </div> */}
+
+          <div className="rounded-full w-[300px] h-[400px] mx-auto sm:mx-0 hidden sm:block">
+            <img
+              src={b}
+              alt="profile-pic"
+              className="border rounded-full shadow-xl max-w-full max-h-full"
             />
           </div>
         </div>

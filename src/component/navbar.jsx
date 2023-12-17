@@ -8,6 +8,7 @@ import About from "./about";
 import Resume from "./resume";
 import design from "../asset/design.png";
 import Contact from "./contact";
+import { useEffect ,useRef} from "react";
 
 import {
   NavLink,
@@ -20,6 +21,29 @@ import {
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
+const toggleButtonRef = useRef(null); // Store reference to menu icon element
+
+useEffect(() => {
+  const handleOutsideClick = (event) => {
+    if (
+      !event.target.closest('.sidebar') &&
+      event.target !== toggleButtonRef.current
+    ) {
+      setToggle(false);
+    }
+  };
+
+  if (toggle) {
+    window.addEventListener('click', handleOutsideClick);
+  }
+
+  return () => {
+    window.removeEventListener('click', handleOutsideClick);
+    // setToggle(false); // Ensure state is updated on cleanup
+  };
+}, [toggle]);
+
+
   return (
     <div className="flex bg-teal-900">
       <div className=' px-3 rounded-xl mx-3 my-3 flex  w-[90px] justify-center items-center  font-[50px] '>
@@ -29,7 +53,7 @@ const Header = () => {
         </Link>
       </div>
       <nav
-        className=" w-full flex  justify-end space-x-7 
+        className=" w-full flex  justify-end space-x-7
         items-center navbar h-20 text-lg px-4"
       >
         <div className="hidden sm:flex  space-x-5 ">
@@ -47,21 +71,22 @@ const Header = () => {
             className="w-[28px] h-[28px] hover: cursor-pointer
             object-contain"
             onClick={() => setToggle((prev) => !prev)}
+            ref={toggleButtonRef} // Assign ref to menu icon
           />
           <div
             className={`${toggle ? "flex" : "hidden"}
-              p-6 absolute top-20 right-0 
+              p-6 absolute top-20 right-0
               mx-4 my-2 rounded-xl min-w-[140px]
               bg-black-gradient shadow-xl
-              text-white 
+              text-white
               sidebar `}
           >
             <ul className="list-none flex flex-col flex-1 p-3 px-7 space-y-3 hover:scale-125 ease-out ">
-              <Link to="/about">about</Link>
-              <Link to="/home">home</Link>
-              <Link to="/contact">contact</Link>
+              <Link to="/home">Home</Link>
+              <Link to="/about">About</Link>
               <Link to="/skills">Skills</Link>
-              <Link to="/resume">resume</Link>
+              <Link to="/contact">Contact</Link>
+              <Link to="/resume">Resume</Link>
             </ul>
           </div>
         </div>
@@ -69,5 +94,8 @@ const Header = () => {
     </div>
   );
 };
+
+
+
 
 export default Header;
