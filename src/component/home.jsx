@@ -16,8 +16,8 @@ import Layout from "./Layout";
 const Home = () => {
   return (
     <Layout>
-      <div className="flex flex-col-reverse sm:flex-row">
-        <div className="sm:w-1/4">
+      <div className="my-10 flex flex-col-reverse sm:flex-row">
+        <div className=" sm:w-1/4">
           <Sidebar />
         </div>
 

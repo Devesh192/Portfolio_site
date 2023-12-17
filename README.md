@@ -36,4 +36,7 @@ Welcome to the Open Source Portfolio Project! This project provides a customizab
         => to install all the dependencies required
 
 
+## live deployment
+   https://devu01.netlify.app/
+
 
